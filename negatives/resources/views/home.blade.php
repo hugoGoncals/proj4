@@ -1,0 +1,39 @@
+@extends('layouts.userLayout')
+
+@section('content')
+<div class="container" ng-controller="listDonationUser">
+    <div class="row">
+        <div class=".col-md-6" >
+
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-history" "></i> My Donations</h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group">
+                <table class="table table-bordered table-hover tablesorter">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <tr ng-repeat="product in donations">
+                      <td class="col-sm-1">
+                        @{{ product.data }}
+                      </td>
+                      <td class="col-sm-1"> @{{ product.totaldone }}€</td>
+                      <td class="col-sm-1"><strong>@{{ product.status }} </strong></td> 
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+@endsection
