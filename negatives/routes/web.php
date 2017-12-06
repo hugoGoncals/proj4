@@ -184,3 +184,9 @@ Route::get('/inicio', 'HomeController@index');
 Route::get('/home', 'HomeController@redireciona');
 Route::get('/api/listUsers', 'HomeController@listUsers');
 
+
+/* ROUTE EMAIL */
+
+Route::post('/', 'MailController@basic_email');
+Route::get('/', 'MailController@index');
+//Route::resource('redirecionaMail', 'MailController@redirecionaMail');

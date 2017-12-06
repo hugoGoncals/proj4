@@ -52,6 +52,8 @@ class HomeController extends Controller
     }
     }
 
+   
+
     public function listUsers($id=null)
     {
     $userId =  Auth::user()->id;
